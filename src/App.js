@@ -19,6 +19,8 @@ class App extends Component {
             currentScreen = <SongSubmission/>
         }
 
+        console.log(this.props.profileScreen)
+        console.log(this.props.uploadScreen)
         return (
             <MuiThemeProvider>
                 <div className="App" style={{marginBottom: 70}}>

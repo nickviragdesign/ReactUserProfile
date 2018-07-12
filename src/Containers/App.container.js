@@ -5,7 +5,8 @@ import App from '../App';
 
 const mapStateToProps = (state) => {
     return {
-        uploadScreen: state.uploadScreen
+        uploadScreen: state.uploadScreen,
+        profileScreen: state.profileScreen
     };
 };
 

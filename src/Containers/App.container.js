@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { viewProfileScreen } from '../Actions/Navigator.actions'
-import { hideAudio } from '../Actions/AudioPlayer.actions'
 import App from '../App';
 
 const mapStateToProps = (state) => {
@@ -12,8 +11,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        viewProfileScreen: () => dispatch(viewProfileScreen()),
-        hideAudio: (bool) => dispatch(hideAudio(bool))
+        viewProfileScreen: () => dispatch(viewProfileScreen())
     };
 };
 

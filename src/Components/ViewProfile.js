@@ -4,7 +4,6 @@ import '../App.css';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
-import AudioPlayer from '../Containers/AudioPlayer.container';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -26,7 +25,7 @@ const style = {
     },
     detailsContainer: {
         width: 364,
-        margin: 'auto'
+        margin: 'auto auto 70px'
     },
     detailsLeft: {
         margin: '8px 4px 0 0',
@@ -162,7 +161,6 @@ class ViewProfile extends Component {
                         </Paper>
                     </Grid>
                 </Grid>
-                <AudioPlayer/>
             </div>
         )
     }

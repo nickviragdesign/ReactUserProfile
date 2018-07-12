@@ -32,7 +32,15 @@ export default class ToolBar extends Component {
                         <Typography variant="title" color="inherit" style={style.title}>
                             HeardIt
                         </Typography>
-                        <Button style={style.button} color="inherit">Login</Button>
+                        <Button style={style.button} color="inherit" onClick={() => {
+                            this.props.viewUploadScreen()
+                            this.props.hideAudio(true)
+                        }}>Upload</Button>
+                        <Button style={style.button} color="inherit" onClick={() => {
+                            this.props.viewProfileScreen()
+                            this.props.hideAudio(false)
+                        }}>Profile</Button>
+                        <Button style={style.button} color="inherit">Logout</Button>
                     </Toolbar>
                 </AppBar>
             </div>

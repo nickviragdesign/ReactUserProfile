@@ -12,7 +12,13 @@ const style = {
 export default class SongSubmission extends Component {
     constructor(props) {
         super(props);
-        this.state = { isTopicSelected: false, sent: false, songNameValue: '', songDescriptionValue: '', songFileValue: [] };
+        this.state = {
+            isTopicSelected: false,
+            sent: false,
+            songNameValue: '',
+            songDescriptionValue: '',
+            songFileValue: []
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFileChange = this.handleFileChange.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
@@ -57,23 +63,22 @@ export default class SongSubmission extends Component {
     }
 
     render() {
-
         return (
-            <div>
+            <div style={{marginBottom: 70}}>
                 <form onSubmit={this.handleSubmit} className="Input" enctype="multipart/form-data">
-                    <input type="hidden" value={this.props.selectedTopic}/>
-                    <input type="hidden" value={this.props.location}/>
+                    <input type="hidden" value="Buffalo"/>
+                    <input type="hidden" value="Buffalo"/>
                     <TextField
                         style={{textAlign: 'left'}}
                         rows="2"
                         rowsMax="4"
                         multiLine="true"
-                        hintText="ex: 'This song is about your movie festival!''"
+                        hintText="ex: 'Fight for your right!''"
                         floatingLabelText="Song Description"
                         onChange={this.handleDescriptionChange}
                         value={this.state.songDescriptionValue} /><br />
                     <TextField
-                        hintText="Ex: 'Broooklyn's Favorite Movie'"
+                        hintText="Ex: 'Buffalo Soldier'"
                         floatingLabelText="Song Name"
                         onChange={this.handleNameChange}
                         value={this.state.songNameValue} /><br />
@@ -86,7 +91,7 @@ export default class SongSubmission extends Component {
                         value={this.state.songFileValue}
                         onChange={this.handleFileChange.bind(this)}
                         style={{ display: 'none' }} /><br />
-                    <RaisedButton type="submit" label="Primary" primary={true} style={style} /><br />
+                    <RaisedButton type="submit" label="Go!" primary={true} style={style} /><br />
                 </form>
             </div>
         );

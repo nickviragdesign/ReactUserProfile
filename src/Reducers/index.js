@@ -1,10 +1,13 @@
 import { combineReducers } from 'redux';
 import { profileDisplayShows } from './ViewProfile.reducers';
-import { songPlaying } from './AudioPlayer.reducers';
+import { songPlaying, audioHidden } from './AudioPlayer.reducers';
+import { uploadScreen } from './Navigator.reducers';
 
 const rootReducer = combineReducers({
     profileDisplayShows,
-    songPlaying
+    songPlaying,
+    uploadScreen,
+    audioHidden
 });
 
 

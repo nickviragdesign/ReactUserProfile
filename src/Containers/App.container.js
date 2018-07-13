@@ -9,10 +9,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        viewProfileScreen: () => dispatch(viewProfileScreen())
-    };
-};
-
 export default connect(mapStateToProps)(App);
